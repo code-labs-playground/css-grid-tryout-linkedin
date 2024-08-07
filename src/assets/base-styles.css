@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Screen Reader Text
+--------------------------------------------- */
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus {
+  clip: auto !important;
+  height: auto;
+  width: auto;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 23px 14px;
+  color: #333;
+  background: #fff;
+  z-index: 100000;
+  text-decoration: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+pre {
+  background: #191919;
+  color: #fff;
+  border-radius: .2em;
+  display: inline-block;
+  font-size: .8rem;
+  padding: .5em .8em;
+}
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+.site {
+  margin: 1em;
+}
+
+.masthead,
+.page-title,
+.main-content,
+.sidebar,
+.footer-content {
+  color: #000;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.masthead {
+  background-color: #06baf0;
+}
+
+.page-title {
+  background-color: #f1ca0d;
+}
+
+.main-content {
+  background-color: #f9684d;
+}
+
+.sidebar {
+  background-color: #d89c5e;
+}
+
+.footer-content {
+  background-color: #549cac;
+}
