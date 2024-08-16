@@ -1,0 +1,29 @@
+.site {
+  display: grid;
+  grid-template-columns: [outer-start] 2fr [halfway] 1fr [quarter] 1fr [outer-end];
+  grid-template-rows: auto 1fr 3fr;
+}
+
+.masthead {
+  grid-column: halfway/outer-end;
+  grid-row: 2/3;
+}
+
+.page-title {
+  grid-area: outer;
+  grid-row: 1/2;
+}
+
+.main-content {
+  grid-column: outer-start/halfway;
+  grid-row: 2/4;
+}
+
+.sidebar {
+  grid-column: halfway/outer-end;
+  grid-row: 3/4;
+}
+
+.footer-content {
+  grid-column: outer-start/outer-end;
+}
