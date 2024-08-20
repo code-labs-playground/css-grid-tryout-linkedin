@@ -15,7 +15,7 @@ Layout
     gap: 1em;
     grid-template-columns: 225px 1fr;
     grid-template-rows: 150px auto auto 150px;
-    max-width: 100%;
+    max-width: none;
   }
 }
 
