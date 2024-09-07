@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+General Styles
+--------------------------------------------------------------*/
+
+/* Logo */
+.logo {
+  margin: 0 auto;
+  width: 200px;
+}
+
+/* Colophon */
+.colophon {
+  background-color: #4c5b5c;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #f0c808;
+    }
+  }
+}
