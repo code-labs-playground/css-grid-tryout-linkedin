@@ -1,7 +1,37 @@
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
+/* Primary grid (overall layout) */
+.cards {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
 
+  @media screen and (min-width: 660px) {
+    grid-template-columns: repeat(2, minmax(auto, 360px));    
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(3, minmax(auto, 360px));    
+  }
+}
+
+/* Secondary grid (card layout) */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .featured-image {
+    justify-self: end;
+  }
+
+}
 
 /*--------------------------------------------------------------
 General Styles

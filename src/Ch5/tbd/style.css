@@ -1,14 +1,35 @@
+body {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
+/* Primary grid (overall layout) */
+.cards {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(3, 400px);
+  margin: 2em;
+  justify-content: center;
+}
 
+
+/* Secondary grid (card layout) */
+.card {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
 
 /*--------------------------------------------------------------
 General Styles
 --------------------------------------------------------------*/
-body {
-  margin: 0;
-}
 
 /* Logo */
 .logo {
@@ -16,45 +37,43 @@ body {
   width: 200px;
 }
 
-/* Cards Container */
-.cards {
-  margin: 2em;
-}
-
-.card {  
-    border: 5px solid white;
+.card {
+    background: #fff;
+    border-radius: 18px;
     box-shadow: 2px 1px 10px rgba(0, 0, 0, .35);
+    padding: 2em;
 }
 
 /* Featured image */
 .featured-image {
 
   img {
-    max-height: 400px;
+    max-height: 200px;
     width: auto;
   }
 }
 
 /* Info */
 .info {
-  background: hsla(246, 40%, 30%, .7);
-  color: white;
-  padding: 2em;
+  background-color: rgba(255,255,255, .8);
+  text-align: center;
 
-  &:hover,
-  &:focus {
-    background: hsla(335, 100%, 35%, 0.8);
-  }
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 .title {
-  font-size: 1.2rem;
+  color: #555;
+  font-size: .9rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: .9rem;
 }
 
 /* Colophon */
