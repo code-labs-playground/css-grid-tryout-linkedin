@@ -1,0 +1,88 @@
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+.site {
+  align-content: center;
+  display: grid;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.gallery {
+  display: grid;
+  gap: 1em 2rem;
+  grid-template-areas: 
+   "first second ."
+   "first second third"
+   "first fourth fourth"
+   ". fourth fourth";
+  grid-template-columns: 300px repeat(2, 150px);
+  grid-template-rows: repeat(3, 150px) 1fr;
+  max-width: 50vw;
+
+  > *:nth-of-type(1) {
+    align-self: end;
+    grid-area: first;
+  }
+
+  > *:nth-of-type(2) {
+    grid-area: second;
+  }
+
+  > *:nth-of-type(3) {
+    align-self: center;
+    grid-area: third;
+  }
+
+  > *:nth-of-type(4) {
+    grid-area: fourth;
+  }
+}
+
+/*--------------------------------------------------------------
+General Styles
+--------------------------------------------------------------*/
+
+.gallery {
+
+  figure img {
+    object-fit: cover;
+  }
+
+  figure:nth-of-type(1) {
+
+    img {
+      aspect-ratio: 2/3;
+      max-width: 300px;
+    }
+  }
+
+  figure:nth-of-type(2) {
+    
+    img {
+      aspect-ratio: 2/3;
+      max-height: 250px;
+    }
+  }
+
+  figure:nth-of-type(3) {
+    
+    img {
+      aspect-ratio: 3/2;
+      max-width: 150px;
+    }
+  }
+
+  figure:nth-of-type(4) {
+    
+    img {
+      aspect-ratio: 3/2;
+      max-width: calc(300px + 1em);
+    }
+  }
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
