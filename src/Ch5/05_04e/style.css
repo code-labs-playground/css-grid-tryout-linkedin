@@ -54,6 +54,7 @@ body {
 .card {  
     border: 5px solid white;
     box-shadow: 2px 1px 10px rgba(0, 0, 0, .35);
+    max-width: 360px;
 }
 
 /* Featured image */
