@@ -42,6 +42,7 @@ body {
 /* Featured image */
 .featured-image {
 
+  img {
     max-height: 400px;
     width: auto;
   }
