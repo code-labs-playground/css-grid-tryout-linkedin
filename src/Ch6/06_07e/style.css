@@ -58,7 +58,7 @@ Layout
   display: grid;
   grid-template-columns: 1fr;
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
 
     &:nth-of-type(1),
