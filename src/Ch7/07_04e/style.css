@@ -27,7 +27,7 @@ Layout
     grid-column: 2/5;
   }
 
-  figure {
+  .rivet {
     grid-column: 3;
     justify-self: end;
   }
