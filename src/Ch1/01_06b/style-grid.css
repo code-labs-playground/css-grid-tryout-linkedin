@@ -12,8 +12,8 @@
   @media screen and (min-width: 600px) {
     grid-template-areas:
       "title title title"
-      "main main masthead"
-      "main main sidebar"
+      "main masthead masthead"
+      "main . sidebar"
       "footer footer footer";
     grid-template-columns: 2fr repeat(2, 1fr);
     grid-template-rows: auto 1fr 3fr;
