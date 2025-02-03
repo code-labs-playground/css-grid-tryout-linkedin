@@ -17,15 +17,29 @@ Layout
     grid-template-rows: 150px auto auto 150px;
     max-width: none;
   }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: 225px 1fr 250px;
+    grid-template-rows: 150px auto 150px;
+  }
 }
 
 .masthead {
   grid-column: 1/2;
+
+  @media screen and (min-width: 1100px) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 }
 
 .main-area {
   grid-column: 2/3;
   grid-row: 1/span 2;
+
+  @media screen and (min-width: 1100px) {
+    grid-row: 2 / 3;
+  }
 }
 
 .sidebar-primary {
@@ -36,6 +50,11 @@ Layout
 .sidebar-secondary {
   grid-column: 2/3;
   grid-row: 3/4;
+
+  @media screen and (min-width: 1100px) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
 }
 
 footer {

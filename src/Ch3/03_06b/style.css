@@ -19,8 +19,9 @@ Layout
   }
 
   @media screen and (min-width: 1100px) {
-    grid-template-columns: 225px 1fr 250px;
+    grid-template-columns: 225px minmax(auto, 30em) 250px;
     grid-template-rows: 150px auto 150px;
+    justify-content: center;
   }
 }
 
