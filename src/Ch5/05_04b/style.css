@@ -16,6 +16,22 @@ Layout
   }
 }
 
+/* Secondary grid (card layout)*/
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  & > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .featured-image {
+    justify-self: end;
+  }
+}
+
 /*--------------------------------------------------------------
 General Styles
 --------------------------------------------------------------*/
