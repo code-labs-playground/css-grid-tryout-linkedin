@@ -1,72 +1,96 @@
-
 /*--------------------------------------------------------------
 Layout
 --------------------------------------------------------------*/
 
 /* Primary grid */
 .cards {
-  display: grid;
-  column-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
     "card1"
     "card2"
     "card3"
     "card4"
     "card5"
     "card6";
-  row-gap: 60px;
+    row-gap: 60px;
 
-  @media screen and (min-width: 980px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
+    @media screen and (min-width: 980px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
       "card1 card1 card3"
       "card2 card2 card3"
       "card4 card5 card5"
       "card4 card6 card6";
-  }
+    }
 
-  .card:nth-of-type(1) {
-    grid-area: card1;
-  }
+    .card:nth-of-type(1) {
+        grid-area: card1;
+    }
 
-  .card:nth-of-type(2) {
-    grid-area: card2;
-  }
+    .card:nth-of-type(2) {
+        grid-area: card2;
+    }
 
-  .card:nth-of-type(3) {
-    grid-area: card3;
-  }
+    .card:nth-of-type(3) {
+        grid-area: card3;
+    }
 
-  .card:nth-of-type(4) {
-    grid-area: card4;
-  }
+    .card:nth-of-type(4) {
+        grid-area: card4;
+    }
 
-  .card:nth-of-type(5) {
-    grid-area: card5;
-  }
+    .card:nth-of-type(5) {
+        grid-area: card5;
+    }
 
-  .card:nth-of-type(6) {
-    grid-area: card6;
-  }
+    .card:nth-of-type(6) {
+        grid-area: card6;
+    }
+}
+
+/* Card Grid */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &:nth-of-type(1),
+    &:nth-of-type(5) {
+        grid-template-areas: "image text";
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(6) {
+        grid-template-areas: "text image";
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+        grid-template-areas:
+            "image"
+            "text";
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 1fr;
+    }
 }
 
 /*--------------------------------------------------------------
 General Styles
 --------------------------------------------------------------*/
 body {
-  margin: 0;
+    margin: 0;
 }
 
 .site {
-  margin: 2em auto;
-  max-width: 1200px;
+    margin: 2em auto;
+    max-width: 1200px;
 }
 
 /* Logo */
 .logo {
-  margin: 0 auto;
-  width: 200px;
+    margin: 0 auto;
+    width: 200px;
 }
 
 .card {
@@ -79,45 +103,45 @@ body {
 /* Featured image */
 .featured-image {
 
-  img {
-    max-height: 300px;
-    width: auto;
-  }
+    img {
+        max-height: 300px;
+        width: auto;
+    }
 }
 
 /* Info */
 .name {
-  font-size: 2rem;
-  font-weight: 700;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .title {
-  font-size: 1.2rem;
-  font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .description {
-  font-size: .9em;
-  margin: 0;
+    font-size: .9em;
+    margin: 0;
 }
 
 footer {
-  background-color: #4c5b5c;
-  color: #fff;
-  width: 100vw;
+    background-color: #4c5b5c;
+    color: #fff;
+    width: 100vw;
 }
 
 .credits aside {
-  padding: 2em 1em;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 1200px;
+    padding: 2em 1em;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
 
-  a {
-    color: #fff;
+    a {
+        color: #fff;
 
-    &:hover {
-      color: #f0c808;
+        &:hover {
+            color: #f0c808;
+        }
     }
-  }
 }
