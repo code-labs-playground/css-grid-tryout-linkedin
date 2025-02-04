@@ -56,34 +56,40 @@ Layout
 /* Card grid */
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
-  &:nth-of-type(1),
-  &:nth-of-type(5) {
-    grid-template-areas: "image text";
-  }
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+    &:nth-of-type(1),
+    &:nth-of-type(5) {
+      grid-template-areas: "image text";
+    }
 
-  &:nth-of-type(2),
-  &:nth-of-type(6) {
-    grid-template-areas: "text image";
-  }
+    &:nth-of-type(2),
+    &:nth-of-type(6) {
+      grid-template-areas: "text image";
+    }
 
-  &:nth-of-type(3),
-  &:nth-of-type(4) {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
       "image"
       "text";
-    grid-template-rows: 350px 1fr;
+      grid-template-rows: 350px 1fr;
+    }
+
+    .featured-image {
+      grid-area: image;
+    }
+
+    .info {
+      grid-area: text;
+    }
   }
 
   .featured-image {
-    grid-area: image;
     justify-self: center;
-  }
-
-  .info {
-    grid-area: text;
   }
 }
 
