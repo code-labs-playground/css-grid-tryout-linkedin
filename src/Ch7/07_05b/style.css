@@ -33,6 +33,25 @@ Layout
   }
 }
 
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 100px) 1fr;
+
+  .lake {
+    grid-column: 1/3;
+    grid-row: 1;
+    order: 1;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .moonscape {
+    grid-column: 2/4;
+    grid-row: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 General Styles
 --------------------------------------------------------------*/
